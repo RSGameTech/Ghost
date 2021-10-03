@@ -35,9 +35,11 @@ async def on_ready():
 bot.owner_ids=[699566190842085439,730454267533459568,768009526942760980]
 
 #Cogs Loading
-file=[]
+file=[
+    'music'
+]
 for ext in file:
-    bot.load_extension(f'Cogs.{ext}')
+    bot.load_extension(f'{ext}')
 
 bot.load_extension("jishaku")
 bot.run(token)
