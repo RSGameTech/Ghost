@@ -1,6 +1,7 @@
 import discord
 import jishaku
 import json
+import os
 from discord.ext import commands
 from discoutils import MinimalEmbedHelp
 from Util import colour
@@ -9,10 +10,10 @@ intents = discord.Intents.all()
 intents.members = True
 bot = commands.Bot(command_prefix="--",help_command=MinimalEmbedHelp(color=0x7289DA),case_insensitive=True,intents=intents)
 
-#JSON Data
+'''#JSON Data
 with open("JSON\\token.json", "r") as to:
     data = json.load(to)
-    token = data["token"]
+    token = data["token"]'''
 
 #BOT On Ready
 @bot.event
@@ -42,4 +43,4 @@ for ext in file:
     bot.load_extension(f'{ext}')
 
 bot.load_extension("jishaku")
-bot.run(token)
+bot.run(os.getenv("token"))
