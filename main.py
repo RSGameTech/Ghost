@@ -20,7 +20,7 @@ async def on_ready():
     text=f"""╠════════════════════════════════════════╣
 ║BOT is Ready                            ║
 ╠════════════════════════════════════════╣
-║BOT Name -> {bot.user.name}                  ║
+║BOT Name -> {bot.user.name}              ║
 ║BOT ID   -> {bot.user.id}          ║
 ╚════════════════════════════════════════╝"""
     channel = bot.get_channel(840984262458081292)
