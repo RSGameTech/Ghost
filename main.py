@@ -4,12 +4,14 @@ import json
 import os
 from discord.ext import commands
 from discoutils import MinimalEmbedHelp
+from dotenv import load_dotenv
 from Util import colour
 
 intents = discord.Intents.all()
 intents.members = True
 bot = commands.Bot(command_prefix="--",help_command=MinimalEmbedHelp(color=0x7289DA),case_insensitive=True,intents=intents)
 
+load_dotenv()
 '''#JSON Data
 with open("JSON\\token.json", "r") as to:
     data = json.load(to)
